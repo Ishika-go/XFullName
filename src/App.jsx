@@ -38,7 +38,7 @@ const handleOnSubmit= (e)=>{
 <button type ="submit">Submit</button>
       </form>
 
-      {fullName!=""?(<p>Full Name: {fullName}</p>):(<p>{fullName}</p>)}
+      {fullName!=""&&(<p>Full Name: {fullName}</p>)}
         
     </>
   )
