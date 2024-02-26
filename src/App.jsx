@@ -20,6 +20,8 @@ const handleOnSubmit= (e)=>{
   let ln = lastName[0].toUpperCase() + lastName.slice(1);
   let fullname = `${fn} ${ln}`;
   setFullName(fullname);
+  setFirstName("");
+  setLastName("");
 
 
 }
