@@ -52,6 +52,7 @@ function App() {
  const [firstName,setFirstName] = useState("");
  const [lastName,setLastName] = useState("");
  const [fullName,setFullName] = useState("");
+ console.log(fullName.length);
  const submitForm=(e)=>{
   e.preventDefault();
   let fName = firstName[0].toUpperCase()+firstName.slice(1);
@@ -68,7 +69,7 @@ function App() {
         <input type='text' id='lastName' required value={lastName} onChange={(e)=>{setLastName(e.target.value)}}/><br></br>
         <button type='submit'>Submit</button>
       </form>
-      {fullName!="" && <p>Full Name: {fullName}</p>}
+      {fullName.replace(/\s/g, '').length != 0?<p>Full Name: {fullName}</p>:null}
     </>
   )
 }
